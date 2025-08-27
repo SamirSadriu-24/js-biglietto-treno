@@ -22,7 +22,7 @@
 let info;
 const priceForKm = 0.21;
 
-const userKm = parseInt(prompt("Inserisci i chilometri che vuoi percorrere"));100
+const userKm = parseInt(prompt("Inserisci i chilometri che vuoi percorrere"));
 console.log(info = "Questi sono i chilometri che vuoi percorrere:", userKm);
 
 const userAge = parseInt(prompt("Inserisci la tua Età"));
@@ -46,7 +46,7 @@ const oldPrice = normalPrice - oldDiscount;
 
 if (userAge < 18){
 
-    console.log(info = "Questo è il prezzo del biglietto per minorenni:", parseFloat(minorPrice.toFixed(2)), "€");
+    console.log(info= "Questo è il prezzo del biglietto per minorenni:", parseFloat(minorPrice.toFixed(2)), "€");
 
 } else if (userAge >= 65){
 
@@ -56,3 +56,4 @@ if (userAge < 18){
     
     console.log(info = "Questo è il prezzo del biglietto:", parseFloat(normalPrice.toFixed(2)), "€");
 }
+
