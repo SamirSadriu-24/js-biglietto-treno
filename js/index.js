@@ -19,12 +19,34 @@
 //INIZIO PROGETTO//
 
 //chiediamo al programma il numero di chilometri e l'età del passeggero.
-let info
+let info;
+const priceForKm = 0.21;
 
-const userKm = parseInt(prompt("Inserisci i chilometri che vuoi percorrere"));
-console.log(typeof userKm);
+const userKm = parseInt(prompt("Inserisci i chilometri che vuoi percorrere"));100
 console.log(info = "Questi sono i chilometri che vuoi percorrere:", userKm);
 
 const userAge = parseInt(prompt("Inserisci la tua Età"));
-console.log(typeof userAge);
 console.log(info = "Età del passeggero:", userAge);
+
+//iniziamo a far ragionare il computer per fargli capire che un km è uguale a 0.21 €
+
+const normalPrice = userKm * priceForKm;
+console.log(info = "Questo è il prezzo del biglietto:", parseInt(normalPrice.toFixed(2)), "€");
+
+const minorDiscount = normalPrice * 0.20;
+const minorPrice = normalPrice - minorDiscount;
+console.log(info = "Questo è il prezzo del biglietto per minorenni:", minorPrice, "€");
+
+const oldDiscount = normalPrice * 0.40;
+const oldPrice = normalPrice - oldDiscount;
+console.log(info = "Questo è il prezzo del biglietto per i viaggiatori Senior:", oldPrice, "€");
+
+//dopo aver fatto capire al computer che calcoli fare per le varie età facciamoli capire che imput far uscire una volta recuperati i dati dall'utente.
+
+if (userAge < 18){
+    console.log(minorPrice);
+} else if (userAge > 70){
+    console.log(oldlPrice);
+} else{
+    console.log(normalPrice);
+}
